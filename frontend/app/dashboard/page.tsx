@@ -79,7 +79,7 @@ export default function DashboardPage() {
 
   const fetchExpenses = async (token: string) => {
     try {
-      const response = await fetch("http://localhost:5000/api/expenses", {
+      const response = await fetch("https://expense-tracker-api-j7vf.onrender.com/api/expenses", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -98,7 +98,7 @@ export default function DashboardPage() {
 
   const fetchStats = async (token: string) => {
     try {
-      const response = await fetch("http://localhost:5000/api/expenses/stats", {
+      const response = await fetch("https://expense-tracker-api-j7vf.onrender.com/api/expenses/stats", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -115,7 +115,7 @@ export default function DashboardPage() {
 
   const fetchTrends = async (token: string) => {
     try {
-      const response = await fetch("http://localhost:5000/api/expenses/trends?period=month", {
+      const response = await fetch("https://expense-tracker-api-j7vf.onrender.com/api/expenses/trends?period=month", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -161,7 +161,7 @@ export default function DashboardPage() {
     if (!confirm("Are you sure you want to delete this expense?")) return
 
     try {
-      const response = await fetch(`http://localhost:5000/api/expenses/${id}`, {
+      const response = await fetch(`https://expense-tracker-api-j7vf.onrender.com/api/expenses/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
