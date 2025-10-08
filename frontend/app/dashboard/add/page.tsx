@@ -30,7 +30,7 @@ export default function AddExpensePage() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/expenses", {
+      const response = await fetch("https://expense-tracker-api-j7vf.onrender.com/api/expenses", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
