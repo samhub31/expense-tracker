@@ -20,10 +20,6 @@ app.use(express.json())
 app.use("/api/auth", authRoutes)
 app.use("/api/expenses", expenseRoutes)
 
-// Health check
-app.get("/api/health", (req, res) => {
-  res.json({ status: "OK", message: "Server is running" })
-})
 
 // Error handling middleware
 app.use((err, req, res, next) => {
