@@ -34,7 +34,7 @@ export default function EditExpensePage() {
 
   const fetchExpense = async (token: string) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/expenses/${id}`, {
+      const response = await fetch(`https://expense-tracker-api-j7vf.onrender.com/api/expenses/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
